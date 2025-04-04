@@ -9,10 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 // Database connection configuration
 const connection = mysql.createConnection({
-    host: process.env.DB_HOST, // Use the host from Render
-    user: process.env.DB_USER, // Your MySQL username
-    password: process.env.DB_PASSWORD, // Your MySQL password
-    database: process.env.DB_NAME // Your database name
+    host: process.env.db, // Use the host from Render
+    user: process.env.user, // Your MySQL username
+    password: process.env.pass, // Your MySQL password
+    database: process.env.to-do-list // Your database name
 });
 
 // Connect to database
