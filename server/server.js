@@ -9,10 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 // Database connection configuration
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '', // Default XAMPP password
-    database: 'todo_webapp'
+    host: process.env.DB_HOST, // Use the host from Render
+    user: process.env.DB_USER, // Your MySQL username
+    password: process.env.DB_PASSWORD, // Your MySQL password
+    database: process.env.DB_NAME // Your database name
 });
 
 // Connect to database
@@ -112,6 +112,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-app.listen(port, () => {
-    console.log(`To-do-list app listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT, () => {
+    console.log(`To-do-list app listening at http://localhost:${process.env.PORT}`);
+});    
