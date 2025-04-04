@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
     host: process.env.db, // Use the host from Render
     user: process.env.user, // Your MySQL username
     password: process.env.pass, // Your MySQL password
-    database: process.env.to-do-list // Your database name
+    database: process.env.db_name // Your database name
 });
 
 // Connect to database
